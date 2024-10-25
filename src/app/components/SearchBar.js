@@ -31,7 +31,7 @@ export default function SearchBar() {
                 placeholder='Pokémon Search'
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                className='mb-2 mr-2 p-2 border rounded w-48'
+                className='mb-2 mr-2 p-2 border rounded w-48 text-black'
             />
             {query && (
                 <button
