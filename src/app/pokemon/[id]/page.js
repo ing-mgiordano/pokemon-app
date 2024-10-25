@@ -1,13 +1,13 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { useParams, useRouter } from "next/navigation"
+import { useParams } from "next/navigation"
+import Link from "next/link"
 import Image from "next/image"
 import Button from "@/app/components/ui/Button"
 
 export default function PokemonDetails() {
     const { id } = useParams()
-    const router = useRouter()
 
     const [data, setData] = useState(null)
 
@@ -57,12 +57,11 @@ export default function PokemonDetails() {
                     </li>
                 ))}
             </ul>
-            <Button
-                onClick={() => router.push("/")}
-                className="mt-6 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-            >
-                Back
-            </Button>
+            <Link href='/'>
+                <Button className="mt-6 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+                    Back
+                </Button>
+            </Link>
         </div>
     </div>
   )
